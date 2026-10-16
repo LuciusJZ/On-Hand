@@ -1,50 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Fundamentals Lab</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onhand Prototype</title>
+  <link rel="stylesheet" href="prototype-style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>
-            CSS Fundamentals Lab
-        </h1>
 
-        <p>
-            This is a regular paragraph used to test inheritance and the cascade. 
-        </p>
 
-        <p>
-            This is a second paragraph with an inline style override.
-        </p>
+  <header class="main-header">
 
-        <p class="intro" style="color: orange;">
-            This is the intro paragraph with an inline style.
-        </p>
+
+    <a class="logo" href="prototype.html">
+  <img src="images/logo.png" alt="OnHand Logo">
+</a>
+
+
+    <nav class="nav-links">
+    <a href="#">LOGIN IN</a>
+    <a href="#">SIGN UP</a>
+     <div class="dropdown-container">
+    <!-- The Checkbox Hack elements -->
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    <label for="menu-toggle" class="dropdown-trigger">MENU ▾</label>
+   
+    <!-- The form structure acts as our search system natively -->
+    <form action="" method="GET" class="dropdown-menu">
+      <div class="search-box">
+        <!-- 'name="query"' creates the ?query=text URL parameter naturally -->
+        <input type="text" name="query" placeholder="Search for something...">
+        <button type="submit">Go</button>
+      </div>
+     
+      <!-- Native CSS option buttons styled neatly like lists -->
+      <div class="dropdown-list">
+        <button type="submit" name="query" value="Plumber" class="search-btn-link">Plumbers</button>
+        <button type="submit" name="query" value="Electrician" class="search-btn-link">Electricians</button>
+        <button type="submit" name="query" value="Carpenter" class="search-btn-link">Carpenters</button>
+        <button type="submit" name="query" value="Painter" class="search-btn-link">Painters</button>
+      </div>
+    </form>
+  </div>
+</nav>
+</header>
+
+
+ 
+  <section class="hero-banner">
+    <h2>Check out our Top Providers of This Month!</h2>
+  </section>
+
+
+  <!-- Artisan Request Section -->
+  <section class="artisan-section">
+    <h3>REQUEST AN ARTISAN</h3>
+    <div class="artisan-grid">
+      <!-- 9 Placeholder squares from the wireframe -->
+      <div class="square-card"></div>
+      <div class="square-card"></div>
+      <div class="square-card"></div>
+      <div class="square-card"></div>
+      <div class="square-card"></div>
+      <div class="square-card"></div>
+      <div class="square-card"></div>
+      <div class="square-card"></div>
+      <div class="square-card"></div>
     </div>
+  </section>
 
-    <div>
-        <h1>
-            Formatting Text
-        </h1>
 
-        <p>
-            This paragraph contains a <cite>cited work</cite> and an <abbr title="Cascading Style Sheets">CSS</abbr> abbreviation.
-        </p>
+  <!-- Split Content Section -->
+  <div class="split-container">
+    <section class="jobs-section">
+      <h3>POPULAR HOUSEHOLD JOBS</h3>
+    </section>
+   
+    <section class="map-section">
+      <div class="map-placeholder">LOCAL MAP</div>
+    </section>
+  </div>
 
-        <p class="intro">This is the intro paragraph for specificity testing.</p>
 
-        <a href="#">This is a sample link.</a>
-    </div>
+  <!-- Footer -->
+  <footer class="main-footer">
+    <a href="#">Contact</a>
 
-    <div>
-        <p class="quote">This paragraph uses pseudo-elements to add decorative quotation marks.</p>
-    </div>
 
-    <div class="card">Card One</div>
-    <div class="card">Card Two</div>
-    <div class="card inset-card">Card Three(Inset Shadow)</div>
+    <br><br>
+    <a href="index.html">Back to Proposal</a>
+  </footer>
+
+
 </body>
 </html>
+ 

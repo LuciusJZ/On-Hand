@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+body {
+  color: #333;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* --- Header --- */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 2px solid #000;
+}
+
+
+ .logo{
+    display: inline-block;
+    max-width: 200px;
+  }
+ 
+.logo img {
+    width: 100%;      
+    height: auto;  
+    display: block;
+  }
+
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  margin-left: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+
+/* --- Hero Banner --- */
+.hero-banner {
+  background-color: #e0e0e0;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 2px solid #000;
+}
+
+
+.hero-banner h2 {
+  font-size: 1.2rem;
+  max-width: 400px;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+
+/* --- Artisan Request Section --- */
+.artisan-section {
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 2px solid #000;
+}
+
+
+.artisan-section h3 {
+  margin-bottom: 20px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+
+.artisan-grid {
+  display: grid;
+  /* Automatically wraps blocks to new lines responsively */
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+.square-card {
+  background-color: #dcdcdc;
+  aspect-ratio: 1 / 1; /* Keeps them perfectly square */
+}
+
+
+/* --- Split Layout (Jobs & Map) --- */
+.split-container {
+  display: flex;
+  flex-direction: column; /* Stacks on mobile */
+  flex-grow: 1;
+}
+
+
+.jobs-section {
+  padding: 40px 20px;
+  border-bottom: 2px solid #000;
+  flex: 1;
+}
+
+
+.jobs-section h3 {
+  font-weight: normal;
+}
+
+
+.map-section {
+  padding: 40px 20px;
+  border-bottom: 2px solid #000;
+  flex: 1.5; /* Gives map section slightly more width on desktop */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.map-placeholder {
+  background-color: #e0e0e0;
+  width: 100%;
+  max-width: 500px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+}
+
+
+/* --- Footer --- */
+.main-footer {
+  text-align: right;
+  padding: 10px 20px;
+}
+
+
+.main-footer a {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+
+/* --- Desktop Layout Enhancements (Screens wider than 768px) --- */
+@media (min-width: 768px) {
+  .split-container {
+    flex-direction: row; /* Aligns side-by-side on desktop */
+  }
+
+
+  .jobs-section {
+    border-right: 2px solid #000;
+    border-bottom: none;
+  }
+
+
+  .map-section {
+    border-bottom: none;
+  }
+}
+
+
+/* --- Dropdown Container System --- */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+
+/* Hide the raw checkbox input visually completely */
+.menu-checkbox {
+  display: none;
+}
+
+
+/* Style our label text to look and feel exactly like a clickable button link */
+.dropdown-trigger {
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 20px;
+  user-select: none;
+}
+
+
+/* Base Hidden Menu Layout Block */
+.dropdown-menu {
+  display: none; /* Keeps hidden by default */
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 15px;
+  background-color: #fff;
+  border: 2px solid #000;
+  width: 240px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 100;
+  padding: 12px;
+}
+
+
+/* --- THE SECRET SAUCE --- */
+/* When the checkbox item state shifts to checked, instantly show the menu display below */
+.menu-checkbox:checked ~ .dropdown-menu {
+  display: block;
+}
+
+
+/* Inner Input Search Header Structure */
+.search-box {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.search-box input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #000;
+  font-size: 0.85rem;
+}
+
+
+.search-box button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+
+/* Dropdown list structure reset styling rules */
+.dropdown-list {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+
+/* Style form buttons to seamlessly strip native browser styling and mimic regular link items */
+.search-btn-link {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 0.9rem;
+  text-align: left;
+  padding: 6px 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+.search-btn-link:hover {
+  background-color: #f0f0f0;
+}
